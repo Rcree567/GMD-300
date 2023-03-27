@@ -17,14 +17,6 @@ public class PlayerController : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
-
-
-
-
-
-
-
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -66,11 +58,6 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-
-
-
-
-
 
     }
 

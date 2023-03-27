@@ -12,6 +12,8 @@ TagManager:
   - Checkpoint
   - CheckPoint
   - FallDetector
+  - NextLevel
+  - PreviousLevel
   layers:
   - Default
   - TransparentFX
