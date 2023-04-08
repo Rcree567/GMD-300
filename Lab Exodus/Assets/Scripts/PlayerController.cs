@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+    float inputHorizontal;
+    float inputVertical;
+
+    bool facingRight = true;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,6 +31,24 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
+        inputVertical = Input.GetAxisRaw("Vertical");
+
+        if( inputHorizontal != 0)
+        {
+            rb.AddForce(new Vector2(inputHorizontal * moveSpeed, 0f));
+        }
+
+        if(inputHorizontal > 0 && !facingRight)
+        {
+            Flip();
+        }
+
+        if (inputHorizontal < 0 && facingRight)
+        {
+            Flip();
+        }
         if (isDashing)
         {
             return;
@@ -82,6 +105,14 @@ public class PlayerController : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+ void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 
 
