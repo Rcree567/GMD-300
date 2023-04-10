@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     bool facingRight = true;
 
+    public Animator animator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -55,6 +57,11 @@ public class PlayerController : MonoBehaviour
         }
         //Player ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+
+        if (isGrounded)
+        {
+            animator.SetBool("AnimGrounded", true);
+        }
 
         //Player movement
         if (Input.GetAxisRaw("Horizontal") > 0f)
