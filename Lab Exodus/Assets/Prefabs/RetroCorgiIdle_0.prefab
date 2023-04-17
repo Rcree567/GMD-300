@@ -174,6 +174,10 @@ GameObject:
   - component: {fileID: 1870448136}
   - component: {fileID: 1870448137}
   - component: {fileID: 1870448138}
+  - component: {fileID: 3488267186247806811}
+  - component: {fileID: 7107879687302287767}
+  - component: {fileID: 7909462834757893406}
+  - component: {fileID: 366555577011122118}
   m_Layer: 0
   m_Name: RetroCorgiIdle_0
   m_TagString: Player
@@ -375,3 +379,77 @@ MonoBehaviour:
     m_Bits: 256
   jumpSound: {fileID: 296924480}
   rb: {fileID: 5943277315449047860}
+  animator: {fileID: 5943277315449047862}
+--- !u!114 &3488267186247806811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943277315449047859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a929f6a276edc45a0f4e72976d8619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 0
+  Heart: {fileID: 21300000, guid: 9ad1c35da170f8a498d987f9ce2537a0, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 6ac53714813b24b45b63b8e626e68b58, type: 3}
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerHealth: {fileID: 7909462834757893406}
+--- !u!114 &7107879687302287767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943277315449047859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6183c0a399c964993f48ecb82a1b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDetector: {fileID: 0}
+--- !u!114 &7909462834757893406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943277315449047859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799c9fa5d6f750148a1c2cad078a7f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 4
+  playerSr: {fileID: 5943277315449047863}
+  playerController: {fileID: 366555577011122118}
+--- !u!114 &366555577011122118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943277315449047859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69cbc00fe470ace4bbb935131d54eb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 12
+  jumpSpeed: 13
+  groundCheckRadius: 0.25
+  groundCheck: {fileID: 5943277314733909423}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  jumpSound: {fileID: 296924480}
+  rb: {fileID: 5943277315449047860}
+  animator: {fileID: 0}

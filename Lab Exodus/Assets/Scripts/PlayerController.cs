@@ -1,10 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed, jumpSpeed, groundCheckRadius;
+    public float moveSpeed = 12f;
+    public float jumpSpeed = 13f;
+    public float groundCheckRadius;
     private bool isGrounded;
     public Transform groundCheck;
     public LayerMask whatIsGround;
@@ -21,14 +23,12 @@ public class PlayerController : MonoBehaviour
     float inputVertical;
 
     bool facingRight = true;
-
-    public Animator animator;
+    private Animator playerAnimation;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-
+        playerAnimation = GetComponent<Animator>();
     }
 
     private void Update()
@@ -58,11 +58,6 @@ public class PlayerController : MonoBehaviour
         //Player ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-        if (isGrounded)
-        {
-            animator.SetBool("AnimGrounded", true);
-        }
-
         //Player movement
         if (Input.GetAxisRaw("Horizontal") > 0f)
         {
@@ -83,6 +78,9 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, jumpSpeed, 0f);
             jumpSound.Play();
         }
+
+        playerAnimation.SetFloat("Speed", Mathf.Abs(playerAnimation.velocity.x));
+        playerAnimation.SetBool("OnGround", groundCheck);
 
         if (Input.GetKeyDown(KeyCode.B) && canDash)
         {
