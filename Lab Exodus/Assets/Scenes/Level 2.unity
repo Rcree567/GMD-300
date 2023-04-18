@@ -6531,6 +6531,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5943277315037339768}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1870448139 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5943277315449047862, guid: 80151b0b80252124c8b5f3480cc96b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 5943277315037339768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1935295644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6746,6 +6752,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1870448138, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
+      propertyPath: playerAnimation
+      value: 
+      objectReference: {fileID: 1870448139}
     - target: {fileID: 3488267186247806811, guid: 80151b0b80252124c8b5f3480cc96b29,
         type: 3}
       propertyPath: hearts.Array.data[0]

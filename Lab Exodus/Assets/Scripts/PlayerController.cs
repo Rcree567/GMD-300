@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     float inputVertical;
 
     bool facingRight = true;
-    private Animator playerAnimation;
+    public Animator playerAnimation;
 
     private void Start()
     {
@@ -79,8 +79,17 @@ public class PlayerController : MonoBehaviour
             jumpSound.Play();
         }
 
-        playerAnimation.SetFloat("Speed", Mathf.Abs(playerAnimation.velocity.x));
-        playerAnimation.SetBool("OnGround", groundCheck);
+
+        playerAnimation.SetFloat("Speed", Mathf.Abs(inputHorizontal));
+
+        if (isGrounded == false)
+        {
+            playerAnimation.SetBool("IsJumping", false);
+        }
+        else
+        {
+            playerAnimation.SetBool("IsJumping", true);
+        }
 
         if (Input.GetKeyDown(KeyCode.B) && canDash)
         {
