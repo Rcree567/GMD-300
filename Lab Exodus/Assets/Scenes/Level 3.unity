@@ -6186,7 +6186,7 @@ GameObject:
   - component: {fileID: 1100096930}
   - component: {fileID: 1100096929}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BGM
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6781,6 +6781,7 @@ MonoBehaviour:
     m_Bits: 256
   jumpSound: {fileID: 829364174}
   rb: {fileID: 1870448130}
+  playerAnimation: {fileID: 0}
 --- !u!1 &1935295644
 GameObject:
   m_ObjectHideFlags: 0
