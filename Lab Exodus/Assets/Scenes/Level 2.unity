@@ -6751,6 +6751,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1870448136, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
+      propertyPath: fallDetector
+      value: 
+      objectReference: {fileID: 1029215512}
     - target: {fileID: 1870448138, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
       propertyPath: playerAnimation
       value: 

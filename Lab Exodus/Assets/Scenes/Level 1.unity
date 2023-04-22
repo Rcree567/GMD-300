@@ -9478,22 +9478,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1870448135, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
-      propertyPath: hearts.Array.data[0]
-      value: 
-      objectReference: {fileID: 1016839250}
-    - target: {fileID: 1870448135, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
-      propertyPath: hearts.Array.data[1]
-      value: 
-      objectReference: {fileID: 1180542629}
-    - target: {fileID: 1870448135, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
-      propertyPath: hearts.Array.data[2]
-      value: 
-      objectReference: {fileID: 1298379833}
-    - target: {fileID: 1870448135, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
-      propertyPath: hearts.Array.data[3]
-      value: 
-      objectReference: {fileID: 402286452}
     - target: {fileID: 1870448136, guid: 80151b0b80252124c8b5f3480cc96b29, type: 3}
       propertyPath: fallDetector
       value: 
